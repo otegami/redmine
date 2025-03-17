@@ -76,7 +76,7 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
       fill_in 'password', :with => password
       find('input[name=login]').click
     end
-    assert_equal '/my/page', current_path
+    assert_current_path '/my/page'
   end
 
   def wait_for_ajax
